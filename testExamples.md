@@ -1,8 +1,9 @@
-#Test Examples
+# Test Examples
 
-##Feature: Create game command
-###Scenario: 
+## Feature: Create game command
 
-##Feature: Join game command
+### Scenario: 
 
-##Feature: Place move command
+## Feature: Join game command
+
+## Feature: Place move command
