@@ -2,9 +2,9 @@
 
 ### Feature: Create game command
 
-##### Scenario:
+##### Scenario: Should initialize an empty tic-tac-toe board
 
-##### Given:
+##### Given: When a game is created
 
 ##### When:
 
