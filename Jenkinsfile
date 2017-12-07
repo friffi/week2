@@ -2,7 +2,6 @@ node {
     checkout scm
     stage('Build') {
         echo 'Building..'
-        sh 'node install npm'
         sh 'npm install'
 		sh 'npm run startpostgres && sleep 10 && npm run migratedb'
 		sh 'npm testCI'
