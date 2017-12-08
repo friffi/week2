@@ -166,5 +166,7 @@ fdescribe('join game command', function () {
             }
         ];
     });
+}
+
 });
 
