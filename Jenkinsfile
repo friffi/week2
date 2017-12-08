@@ -6,10 +6,6 @@ node {
 		sh 'npm run startpostgres && sleep 10 && npm run migratedb'
 		sh 'npm run testCI'
     }
-    stage('Build Docker'){
-
-            sh './dockerbuild.sh'
-    }
     stage('Test') {
         echo 'Testing..'
     }
