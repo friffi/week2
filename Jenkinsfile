@@ -8,7 +8,7 @@ node {
     }
     stage('Build Docker'){
 
-            sh 'dockerBuild.sh'
+            sh './dockerbuild.sh'
     }
     stage('Test') {
         echo 'Testing..'
