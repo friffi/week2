@@ -8,7 +8,7 @@
 * Added the key to my GitHub keys
 * Created Jenkinsfile and created Jenkins project/pipeline and verified that it ran all stages defined in the Jenkinsfile.
 
-I basically followed the instruction that can be found [here](https://github.com/hgop/syllabus-2017/blob/master/Assignment/Day6/manualJenkins.md)There might have been some minor fixes to get Jenkins working but nothing I can remember and if so it was a minor fix. For me the hard part for me was not to get Jenkins instance running but to make the tic-tac-toe project go through the pipeline as of now everything should be working (builds and runs the project, runs the tests, builds to Docker).
+I basically followed the instruction that can be found [here](https://github.com/hgop/syllabus-2017/blob/master/Assignment/Day6/manualJenkins.md). There might have been some minor fixes to get Jenkins working but nothing I can remember and if so it was a minor fix. For me the hard part for me was not to get Jenkins instance running but to make the tic-tac-toe project go through the pipeline as of now everything should be working (builds and runs the project, runs the tests, builds to Docker).
 
 #### Link to Jenkins
 
