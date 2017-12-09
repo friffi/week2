@@ -1,31 +1,55 @@
 # Test Examples
 
-### Feature: Create game command
+### Scenario: Illegal move 
 
-##### Scenario: Should initialize an empty tic-tac-toe board
+##### Given: [Placed(0,0,X)]
 
-##### Given: When a game is created
+##### When: Place(0,0,O)
 
-##### When:
+##### Then: [IllegalMove] // Move has already been made
 
-##### Then: 
+### Scenario: Illegal move 
 
-### Feature: Join game command
+##### Given: [Placed(1,1,X)]
 
-##### Scenario:
+##### When: Place(1,2,X)
 
-##### Given:
+##### Then: [IllegalMove] // Not your turn
 
-##### When:
 
-##### Then: 
 
-### Feature: Place move command
+### Scenario: X wins
 
-##### Scenario:
+##### Given: [Placed(0,0,X), Placed(1,0,O), Placed(0,1,X), Placed(2,0,O)]
 
-##### Given:
+##### When: Place(0,2,X)
 
-##### When:
+##### Then: [X Won]
 
-##### Then: 
+### Scenario: X wins
+
+##### Given: [Placed(0,0,X), Placed(0,1,O), Placed(1,1,X), Placed(2,0,O)]
+
+##### When: Place(2,2,X)
+
+##### Then: [X Won]
+
+### Scenario: O wins
+
+##### Given: [Placed(1,1,X), Placed(0,0,O), Placed(1,2,X), Placed(1,0,O), Placed(1,2,X)]
+
+##### When: Place(2,0,O)
+
+##### Then: [O Won]
+
+
+### Scenario: Draw
+
+##### Given: [Placed(0,0,X), Placed(0,1,O), Placed(0,2,X), Placed(1,0,O), Placed(1,1,X), Placed(2,0,O), Placed(1,2,X), Placed(2,2,0)]
+
+##### When: Place(2,1,X)
+
+##### Then: [Draw]
+
+
+
