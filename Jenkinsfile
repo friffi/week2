@@ -4,7 +4,6 @@ node {
         echo 'Setting up'
         sh 'npm install'
         sh 'cd client && npm install'
-		sh 'npm run startpostgres && sleep 10 && npm run migratedb'
     }
     stage('Test') {
         echo 'Testing..'
