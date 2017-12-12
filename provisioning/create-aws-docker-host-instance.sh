@@ -40,8 +40,8 @@ if [ ! -e ~/aws/instance-id.txt ]; then
     echo ${INSTANCE_ID} > ~/aws/instance-id.txt
 
     echo Waiting for instance to be running
-    echo aws ec2 wait --region us-east-2 instance-running --instance-ids ${INSTANCE_ID}
-    aws ec2 wait --region us-east-2 instance-running --instance-ids ${INSTANCE_ID}
+    echo aws ec2 wait --region us-east-2c instance-running --instance-ids ${INSTANCE_ID}
+    aws ec2 wait --region us-east-2c instance-running --instance-ids ${INSTANCE_ID}
     echo EC2 instance ${INSTANCE_ID} ready and available on ${INSTANCE_PUBLIC_NAME}
 fi
 
