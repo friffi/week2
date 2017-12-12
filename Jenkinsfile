@@ -1,21 +1,22 @@
 node {
     checkout scm
-    stage('Build') {
-        echo 'Building..'
+    stage('Setup') {
+        echo 'Setting up'
         sh 'npm install'
         sh 'cd client && npm install'
 		sh 'npm run startpostgres && sleep 10 && npm run migratedb'
-		sh 'npm run testCI'
-    }
-    stage('Build Docker'){
-
-        sh './dockerbuild.sh'
     }
     stage('Test') {
         echo 'Testing..'
+        sh 'npm run testCI'
     }
     stage('Deploy') {
         echo 'Deploying....'
+        sh './dockerbuild.sh'
+        dir('./provisioning')
+        {
+            sh "./provision-new-environment.sh"
+        }
     }
 }
 
