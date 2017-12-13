@@ -7,7 +7,7 @@ node {
     }
     stage('Test') {
         echo 'Testing..'
-        sh 'npm run testCI'
+        sh 'npm run test:nowatch'
     }
     stage('Deploy') {
         echo 'Deploying....'
